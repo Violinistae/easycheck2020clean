@@ -1,0 +1,71 @@
+#modalforactionscontainer {
+    display: flex;
+}
+
+#resquestGpoPContainer {
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+
+#instruccRequestGpoP {
+    flex-grow: .5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#instruccRequestGpoP > p {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#requestGpoPForm {
+    flex-grow: 3;
+    display: grid;
+    padding: 4em 4em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 4em;
+    grid-row-gap: 4em;
+    font-size: 18px;
+}
+
+#requestGpoPForm input[type=password], #requestGpoPForm input[type=text], #requestGpoPForm select{
+    padding: 1em;
+    background-color: transparent;
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+    border-bottom: solid black 2px;
+    border-radius: 2px;
+}
+
+#requestGpoPForm select {
+    cursor: pointer;
+}
+
+#requestGpoPForm > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#sendRequesGPDiv {
+    grid-column-start: span 2;
+}
+
+#sendGpoPRequest {
+    padding: 1em 0em;
+    cursor: pointer;
+    border: black solid 2px;
+    background-color: transparent;
+    border-radius: 10px;
+    transition: 300ms background ease-in-out;
+    font-size: 19px;
+}
+
+#sendGpoPRequest:hover {
+    color: white;
+    background-color: rgb(55, 55, 55);
+}

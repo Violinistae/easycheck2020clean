@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#acadOverview {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 25fr 3fr 68fr 2fr;
+    grid-template-rows: 9fr 2fr 84fr 5fr;
+    grid-template-areas: 
+    "mainnavbar mainnavbar mainnavbar mainnavbar mainnavbar"
+    ". . . . ."
+    ". groupActionsBar . mainContainerAcadOverView ."
+    ". . . . .";
+    font-family: 'Noto Sans', sans-serif;
+    flex-grow: 1;
+}
+
+#acadOverview > nav {
+    width: 100%;
+    height: 100%;
+    grid-area: mainnavbar;
+}
+
+#mainNavAcad {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 1.4em;
+    font-size: 1.4vw;
+    list-style: none;
+}
+
+.lblNavDivAcadOver {
+    flex-grow: 1;
+}
+
+#groupActionsBar {
+    grid-area: groupActionsBar;
+    border-radius: 10px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: 85%;
+    grid-row-gap: 3.3vh;
+    height: 15rem;
+}
+
+.acadOverbtn {
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    border: transparent;
+    border-radius: 1px;
+    text-align: center;
+    outline: none;
+    font-size: 1.1vw;
+}
+
+.acadOverbtn:hover {
+    background-color: aliceblue;
+}
+
+#mainContainerAcadOverview {
+    grid-area: mainContainerAcadOverView;
+    overflow: auto;
+    max-width: 100%;
+    padding: .2em .2em;
+}
+
+#noInstrCompAvailable {
+    display: block;
+    position: absolute;
+    width: auto;
+    top: 50%;
+    left: 63%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2vw;
+}

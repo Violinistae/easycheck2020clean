@@ -1,0 +1,149 @@
+#listGposPPage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: .5fr 9.5fr;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+#listGposPPage li {
+    list-style-type: none;
+}
+
+#listGposPPage > nav {
+    width: 100%;
+    height: 100%;
+}
+
+#noGposPAvailable {
+    display: block;
+    position: absolute;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4vw;
+}
+
+#listGposPNav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 1.4rem;
+    font-size: 1.4vw;
+}
+
+#pathPage {
+    flex-grow: 1;
+}
+
+#sendRqstGP {
+    flex-grow: .4;
+}
+
+#requestGPBtn {
+    cursor: pointer;
+}
+
+#inputNavGposP {
+    flex-grow: 1;
+}
+
+#inputNavGposP > input {
+    border-bottom: black solid 2px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: transparent;
+    outline: none;
+    padding: .4rem;
+    font-size: 1.2vw;
+    width: 75%;
+}
+
+/* ------------------------------------------------------------------ */
+
+#allGPTable {
+    width: 100%;
+}
+
+#headGpTable {
+    width: 100%;
+}
+
+#forGPOverflow {
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    overflow: auto;
+}
+
+
+#listGposPMainC {
+    width: 100%;
+    height: 100%;
+}
+
+#topTableRow > th{    
+    padding: 1.2rem 0%;
+    color: white;
+    border-radius: 2px;
+}
+
+.headColGP {
+    background-color: transparent;
+    border: transparent solid 2px;
+}
+
+.claveCol {
+    width: 10%;
+}
+.materiaCol {
+    width: 30%;
+}
+.cicloCol {
+    width: 20%;
+}
+.grupoCol {
+    width: 15%;
+}
+.accionesCol {
+    width: 25%;
+}
+
+.accionesTd {
+    justify-self: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.commonGPRow > td {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.2vw;
+}
+
+#listGposPMainC tr:nth-child(even) > td {
+    background-color: rgb(197, 197, 197);
+}
+
+.actionsGpoPIcon {
+    cursor: pointer;
+    flex-grow: 1;   
+    width: 100%;
+}
+
+#inputListaAlumnos {
+    display: none;
+}
