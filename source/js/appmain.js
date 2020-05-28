@@ -40,7 +40,21 @@ $(document).ready(function ($) {
 					insertAlumnoStyles();
 				}
 				
-				//insert username with ajax
+				//insert username with ajax, falta añadir el método a la lista de la DB
+				$.ajax({
+					url: "../../index_ajax.php?controller=usuario&action=getUserForSimple",
+					type: 'POST',
+					dataType: 'json',				
+				}).done(function setUsernameOnNav(userDataForNav){
+					var UsernameCont = "Bienvenido";
+					if (!userDataForNav.error) {
+						UsernameCont += userDataForNav.userN + " " + userDataForNav.userApp;
+					}
+					$("#modforactions").textContent("Bienvenido" + UsernameCont);					
+				}).fail(function () {
+					AJAXrequestFailed("Fallo en petición AJAX para insertar Username en Navbar");
+				});
+
 			} else if (sessionVariables.error) {
 				console.log("Cerrar Sesión");
 				window.location.replace("../../index.php");
@@ -295,6 +309,7 @@ $(document).ready(function ($) {
 					}).fail(function () {
 					AJAXrequestFailed("Fallo en Petición AJAX para actualizar información de usuario");
 				});
+
 				//Call AJAX function to update
 
 			} else if (sessionVariables.error) {

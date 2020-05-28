@@ -207,12 +207,15 @@
 					$user->setApellidos($u["Apellidos"]);
 					$user->setEmail($u["Email"]);
 				}
-				return $user;
+
+				echo json_encode (array('error' => false, 'userN' => $user->getNombres(), 'userApp' => $user->getApellidos()));
+				//return $user;
 			}
-			return null;
+			echo json_encode(array('error' => true));
+			//return null;
 		}		
 
-
+		//Check the data security of this method. You're giving ALL the DATA
 		public function getUserInfo() {
 			if(isset($_SESSION["userreg"]) && isset($_SESSION["usertype"])) {
 				

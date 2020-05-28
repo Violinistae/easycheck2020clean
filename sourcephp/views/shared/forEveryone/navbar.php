@@ -24,7 +24,7 @@
 			</div>
 			<div class="usericowelcome">
 				<i class="fa fa-user-circle"></i>
-				<label>Bienvenido <?php echo "Nombre Usuario"; ?></label>
+				<label id="welcomeUsername"></label>
 			</div>
 		</li>
 	</ul>
