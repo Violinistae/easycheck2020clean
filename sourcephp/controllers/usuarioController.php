@@ -185,10 +185,13 @@
 						$user->setApellidos($u["Apellidos"]);
 						$user->setEmail($u["Email"]);
 					}
-					return $user;
-				}
-				return null;
-			}
+					echo json_encode (array('error' => false, 'userN' => $user->getNombres(), 'userApp' => $user->getApellidos()));
+					//return $user;				
+				} else 
+					echo json_encode(array('error' => true));		
+				//return null;
+			} else
+				echo json_encode(array('error' => true));
 		}
 
 		public function getUserForSimpleById ($Id_U) {
@@ -208,8 +211,7 @@
 					$user->setEmail($u["Email"]);
 				}
 
-				echo json_encode (array('error' => false, 'userN' => $user->getNombres(), 'userApp' => $user->getApellidos()));
-				//return $user;
+				
 			}
 			echo json_encode(array('error' => true));
 			//return null;
@@ -233,11 +235,18 @@
 					$userinfores = $user_info->fetch(PDO::FETCH_ASSOC);
 					if($_SESSION["usertype"] == 1) {
 						
+
 						$acadinfo = $this->pdo->prepare(
+							"SELECT Id_Academia, Academia, Ciclo_Periodo, academia.Carrera FROM 
+							easycheckdbcopy.academia join easycheckdbcopy.carrera on academia.Carrera =
+							carrera.Id_Carrera where Coordinador_Acad = ?"
+						);
+
+						/*$acadinfo = $this->pdo->prepare(
 							"SELECT Id_Academia, Academia, Ciclo_Periodo, academia.Carrera FROM 
 							easycheckdb.academia join easycheckdb.carrera on academia.Carrera =
 							carrera.Id_Carrera where Coordinador_Acad = ?"
-						);
+						);*/ //this query is for real running DB
 						$acadinfo -> execute([$userreg]);
 
 						$acadqryrows = $acadinfo->rowCount();

@@ -31,7 +31,7 @@
 }
 
 .mainnavbar>nav svg {
-    font-size: 2.3vw;
+    font-size: 2vw;
 }
 
 .mainnavbar>nav>ul {
@@ -128,8 +128,19 @@
     display: grid;
     grid-template-columns: .2fr .8fr;
     grid-template-rows: auto;
-    grid-column-gap: 2vw;
-    text-align: right;
+    grid-column-gap: 1vw;
+    text-align: center;
+}
+
+.welUsername{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(.5fr); 
+    align-content: center;
+}
+
+.welUsername>svg{
+    align-self: center;
 }
 
 .usermenu>div>i {

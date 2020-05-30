@@ -122,6 +122,7 @@ $(document).ready(function ($) {
 				type: 'POST',
 				dataType: 'json'
 			}).done(function (userinfoRes) {
+				console.log(userinfoRes);
 				getUserInfo(userinfoRes);
 			}).fail(function () {
 				AJAXrequestFailed("Fallo en petición AJAX para obtención de información de usuario.");

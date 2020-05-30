@@ -46,11 +46,11 @@ $(document).ready(function ($) {
 					type: 'POST',
 					dataType: 'json',				
 				}).done(function setUsernameOnNav(userDataForNav){
-					var UsernameCont = "Bienvenido";
+					var UsernameCont = "";
 					if (!userDataForNav.error) {
 						UsernameCont += userDataForNav.userN + " " + userDataForNav.userApp;
 					}
-					$("#modforactions").textContent("Bienvenido" + UsernameCont);					
+					$("#welcomeUsername").text(UsernameCont);					
 				}).fail(function () {
 					AJAXrequestFailed("Fallo en petición AJAX para insertar Username en Navbar");
 				});

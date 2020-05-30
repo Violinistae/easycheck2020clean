@@ -24,7 +24,10 @@
 			</div>
 			<div class="usericowelcome">
 				<i class="fa fa-user-circle"></i>
-				<label id="welcomeUsername"></label>
+				<div class="welUsername">
+					<p>Bienvenido</p>
+					<label id="welcomeUsername"></label>
+				</div>			
 			</div>
 		</li>
 	</ul>
