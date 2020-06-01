@@ -101,7 +101,14 @@ $(document).ready(function ($) {
 				}
 			}
 		}
-        
+
+		insertMainPageAlumnoContent = () => {
+			console.log("Func for inserting Info on alumno main page");
+			gotoGposPeriodo(null);
+		}
+		
+	//---------------------------------------------------------------------------------------------
+		
 	gotoPersonalProfilePage = () => {
 		setCookie("lOaDeDpAgE_ajax", "gotoPersonalProfilePage", 7);
 		$(".subdropumen").removeClass('active'); 

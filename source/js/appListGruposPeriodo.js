@@ -162,7 +162,7 @@ $(document).ready(function ($) {
             });           
 
         }).fail(function () {
-            AJAXrequestFailed("Fallo en petición AJAX para obtener info de grupoacademia");
+            AJAXrequestFailed("Fallo en petición AJAX para obtener info de grupoperiodo");
         });
     }
 

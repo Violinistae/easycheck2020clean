@@ -9,6 +9,8 @@ $(document).ready(function ($) {
 
 								/* Funciones de "uso único" */
 
+	//Verificar si hay sesión iniciada
+
 	//Insertar Navbar
 	insertMainNavbar = () => {
 		$.ajax({

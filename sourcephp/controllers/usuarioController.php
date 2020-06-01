@@ -210,11 +210,11 @@
 					$user->setApellidos($u["Apellidos"]);
 					$user->setEmail($u["Email"]);
 				}
-
+				return $user;
 				
 			}
 			echo json_encode(array('error' => true));
-			//return null;
+			return null;
 		}		
 
 		//Check the data security of this method. You're giving ALL the DATA
