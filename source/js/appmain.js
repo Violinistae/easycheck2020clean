@@ -7,9 +7,17 @@ $(document).ready(function ($) {
 // ------------------------------------------------ FUNCTIONS TO CALL --------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------------------
 
-								/* Funciones de "uso único" */
+	//Verificando si hay sesión iniciada
 
-	//Verificar si hay sesión iniciada
+	verifyMySession = (sessionVariables) => {
+		if (sessionVariables.error) {
+			console.log("Clossing Session");
+			window.location.replace("../../index.php");
+		}
+	}
+	getSessionVariables(verifyMySession);
+
+								/* Funciones de "uso único" */
 
 	//Insertar Navbar
 	insertMainNavbar = () => {

@@ -5,6 +5,31 @@
 	 */
 	require_once('config/database.php');
 	require_once('core/Connection.php');
+
+	use PHPMailer\PHPMailer\PHPMailer;
+	use PHPMailer\PHPMailer\Exception;
+
+	/**	Para abrir PHPMailer
+	 * 
+	 */
+
+	 /*
+	$mail = '../source/resources/phpmailer/src/';
+	if (isdir($mail)) {
+		if (($mailerdir = opendir($mail)) !== false){
+			while ($mailerfile = readdir ($mailerdir)) {
+				if ($mailerfile != '.'){
+					if ($mailerfile != '..'){						
+						require_once($mail.$mailerfile);
+					}
+				}
+			}
+		}
+	} //Verificar si no carga PHPMailer
+	require_once($mailerPath . 'Exception.php');
+	require_once($mailerPath . 'PHPMailer.php');
+	*/
+
 	
 	/** Para abrir todos lo modelos que se requerirán
 	 *  

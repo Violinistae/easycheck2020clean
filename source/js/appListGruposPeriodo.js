@@ -147,7 +147,7 @@ $(document).ready(function ($) {
             if (sessionVariables.userreg == profGP) {
                 $(".contextCostumMenu").attr("dataPurpose", "mPfGsP");
                 creatorFlag = true;
-                console.log("Soy el creador");
+                //console.log("Soy el creador");
             } else {
                 $(".contextCostumMenu").attr("dataPurpose", "mAlGsP");
             }

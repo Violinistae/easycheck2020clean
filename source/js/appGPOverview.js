@@ -289,8 +289,8 @@ $(document).ready(function ($) {
 
 
 insertDataIntoCalfsTable = (valParData, dataForCalfTable) => {
-    console.log(valParData);
-    console.log(dataForCalfTable);
+    //console.log(valParData);
+    //console.log(dataForCalfTable);
 
     let alumnosGP = dataForCalfTable.alumnosGP;
 
@@ -340,7 +340,7 @@ insertDataIntoCalfsTable = (valParData, dataForCalfTable) => {
             data: dataArray
         }).done(function (resCalf) {
             let calf = resCalf.Calf;
-            console.log(calf);
+            //console.log(calf);
             for (let j = 0; j < calf.length; ++j) {
                 if (calf[j][0] != "000") {
                     let promedioA = parseInt(calf[j][0]);

@@ -1,6 +1,7 @@
-$(document).ready(function ($) {
+$(document).ready(function ($) {	
+
     							/* Funciones para Cargar Páginas */
-				//Siempre establecer el valor de la cookie de lOaDeDpAgE_ajax
+				//Siempre establecer el valor de la cookie de lOaDeDpAgE_ajax	
 
 	gotoMainPage = (e) => {
 		setCookie("lOaDeDpAgE_ajax", "gotoMainPage", 7);
@@ -129,7 +130,7 @@ $(document).ready(function ($) {
 				type: 'POST',
 				dataType: 'json'
 			}).done(function (userinfoRes) {
-				console.log(userinfoRes);
+				//console.log(userinfoRes);
 				getUserInfo(userinfoRes);
 			}).fail(function () {
 				AJAXrequestFailed("Fallo en petición AJAX para obtención de información de usuario.");
@@ -505,7 +506,8 @@ $(document).ready(function ($) {
 							var cellAcciones = materiaRow.insertCell(4); cellAcciones.innerHTML = actionsDiv;
 
 							materiaRow.classList.add("commonMateriaRow");
-							document.getElementById("showmaterias").disabled = false;
+							if (document.getElementById("showmaterias") != null)			//Deshabilitar botón para "Ver materias"
+								document.getElementById("showmaterias").disabled = false;														
 						}
 					} else {
 						setNoCreatedMaterias();
